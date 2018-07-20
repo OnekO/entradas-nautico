@@ -31,20 +31,19 @@ const getGrupos = function($) {
             fecha: groupData[1].trim()
         });
     });
-
-    console.log(grupos);
+    console.log('Grupos con entradas', grupos);
     let gruposEnviados = [];
     if (fs.existsSync('data')) {
         gruposEnviados = JSON.parse(fs.readFileSync('data').toString());
     }
-    console.log(gruposEnviados);
+    console.log('Ya enviado a', gruposEnviados);
     grupos = grupos.filter(
         grupo => palabrasClave.some(
             clave => grupo.nombre.toLowerCase().indexOf(clave.toLowerCase()) !== -1
             && gruposEnviados.find(ge => ge.nombre === grupo.nombre && ge.fecha === grupo.fecha) === undefined
         )
     );
-    console.log(grupos);
+    console.log('Envío a', grupos);
     return grupos;
 };
 
