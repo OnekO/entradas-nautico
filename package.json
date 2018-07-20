@@ -1,0 +1,15 @@
+{
+  "name": "entradas-nautico",
+  "version": "1.0.0",
+  "description": "Looks for tickets in El Nautico",
+  "main": "app.js",
+  "author": "Karlos Presumido AKA OnekO",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cheerio-req": "^1.2.2",
+    "cron": "^1.3.0",
+    "dotenv": "^6.0.0",
+    "nodemailer": "^4.6.7"
+  }
+}
